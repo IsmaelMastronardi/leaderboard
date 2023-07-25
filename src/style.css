@@ -1,3 +1,8 @@
+.tilteSection {
+  display: flex;
+  justify-content: center;
+}
+
 .pageTitle {
   font-size: 40px;
 }
