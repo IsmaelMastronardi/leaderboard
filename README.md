@@ -87,6 +87,16 @@ Example commands:
 
 Install this project using git, with the npm i command, Then run the project using the command npm start.
 
+
+### Usage
+
+To run the project, execute the following command:
+
+```
+  npm start
+```
+---
+
 ### Run tests
 
 To run tests, run the following command:
