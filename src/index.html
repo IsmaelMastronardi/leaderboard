@@ -18,13 +18,9 @@
             <button class="refreshBtn">Refresh</button>
           </div>
           <div>
-            <ul class="scoreList">
+            <ul class="scoreList" id="gameScoreList">
               <li class="scoreItem">Name:100</li>
               <li class="scoreItem greyItem">Name:20</li>
-              <li class="scoreItem">Name:50</li>
-              <li class="scoreItem greyItem">Name:78</li>
-              <li class="scoreItem">Name:125</li>
-              <li class="scoreItem greyItem">Name:77</li>
               <li class="scoreItem">Name:42</li>
             </ul>
           </div>
@@ -38,8 +34,8 @@
               <label for="fName"></label>
               <input type="text" id="fName" class="formName" placeholder="your name"><br>
               <label for="fScore"></label>
-              <input type="text" id="fScore" class="formScore" placeholder="your score"><br>
-              <input type="submit" class="fSubmit">
+              <input type="number" id="fScore" class="formScore" placeholder="your score"><br>
+              <input type="button" class="fSubmit" id="fButton">
             </form>
           </div>   
         </article>
