@@ -9,10 +9,9 @@ fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
     'Content-type': 'application/json; charset=UTF-8',
   },
 })
-// Exito
-  .then((response) => response.json()) // convertir a json
-  .then((json) => console.log(json)) // imprimir los datos en la consola
-  .catch((err) => console.log('Solicitud fallida', err)); // Capturar errores
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+  .catch((err) => console.log('Solicitud fallida', err));
 
 const scoreList = document.querySelector('#gameScoreList');
 const fName = document.querySelector('#fName');
@@ -26,13 +25,18 @@ const clearList = () => {
 };
 
 const display = (arr) => {
-  arr.result.forEach((element) => console.log(element));
   clearList();
-  for (let i = 0; i < arr.result.length; i++) {
-    const newItem = document.createElement('div');
-    newItem.textContent = arr.result[i].user + arr.result[i].score;
+  const newArr = arr.result.sort((a, b) => a.score - b.score);
+  newArr.forEach((elem) => {
+    const newItem = document.createElement('li');
+    newItem.textContent = elem.user + elem.score;
     scoreList.appendChild(newItem);
-  }
+    const i = newArr.indexOf(elem);
+    newItem.classList.add('scoreItem');
+    if (i % 2 === 0) {
+      newItem.classList.add('greyItem');
+    }
+  });
 };
 const refreshScores = () => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/eTp1wZzwkSLFf86ks2kW /scores/')
@@ -46,8 +50,6 @@ const submitScore = () => {
     body: JSON.stringify({
       user: fName.value,
       score: fScore.value,
-      // user: 'oli',
-      // score: 50,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
