@@ -1,0 +1,88 @@
+.tilteSection {
+  display: flex;
+  justify-content: center;
+}
+
+.pageTitle {
+  font-size: 40px;
+}
+
+.leaderboardSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.scoreArticle {
+  width: 240px;
+}
+
+.scoreDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 36px;
+}
+
+.secondTitle {
+  margin: 0;
+}
+
+.fSubmit,
+.refreshBtn {
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 2px;
+  box-shadow: 3px 2px 5px black;
+  transition: 0.1s;
+}
+
+.fSubmit:hover,
+.refreshBtn:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.fSubmit:active,
+.refreshBtn:active {
+  background-color: rgb(199, 199, 199);
+}
+
+.scoreList {
+  list-style: none;
+  padding: 0;
+  border: 2px solid;
+}
+
+.scoreItem {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+}
+
+.greyItem {
+  background-color: rgb(189, 189, 189);
+}
+
+.scoreForm {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+}
+
+.formScore,
+.formName {
+  border: 2px solid;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
