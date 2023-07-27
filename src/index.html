@@ -17,13 +17,13 @@
             <h2 class="secondTitle">Recent scores</h2>
             <button class="refreshBtn" id="refreshBtn">Refresh</button>
           </div>
-          <div id="scoreListHolder">
+          <div id="scoreListHolder" class="listHolder">
             <ul class="scoreList" id="gameScoreList">
             </ul>
           </div>
         </article>
         <article>
-          <div>
+          <div class="scoreDiv">
             <h2 class="secondTitle">Add your score</h2>
           </div>
           <div>
@@ -32,7 +32,9 @@
               <input type="text" id="fName" class="formName" placeholder="your name"><br>
               <label for="fScore"></label>
               <input type="number" id="fScore" class="formScore" placeholder="your score"><br>
-              <input type="button" class="fSubmit" id="fButton" value="submit">
+              <div class="submitBtnDiv">
+                <input type="button" class="fSubmit" id="fButton" value="submit">
+              </div>
             </form>
           </div>   
         </article>

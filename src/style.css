@@ -21,6 +21,10 @@ body {
   gap: 10vw;
 }
 
+.listHolder {
+  background-color: white;
+}
+
 .scoreArticle {
   width: 340px;
 }
@@ -30,6 +34,7 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 36px;
+  height: 50px;
 }
 
 .secondTitle {
@@ -44,25 +49,37 @@ input::-webkit-inner-spin-button {
 
 .fSubmit,
 .refreshBtn {
+  color: white;
   font-size: 14px;
-  padding: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
-  background-color: white;
-  border: 1px solid;
-  border-radius: 2px;
-  box-shadow: 3px 2px 5px black;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: transparent;
+  border: 1px solid ;
+  border-radius: 20px;
+  /* box-shadow: 3px 2px 5px rgb(0, 0, 0); */
   transition: 0.1s;
 }
 
 .fSubmit:hover,
 .refreshBtn:hover {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(49, 178, 230);
+  padding: 12px;
 }
 
 .fSubmit:active,
 .refreshBtn:active {
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(113, 205, 241);
+}
+
+.submitBtnDiv {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.fSubmit {
+
 }
 
 .scoreList {
@@ -120,19 +137,17 @@ input::-webkit-inner-spin-button {
 @keyframes append-animate {
   from {
     opacity: 0;
-    margin-right: 100%;
-    margin-bottom: 100%;
+    margin-top: 100%;
   }
 
   to {
     opacity: 1;
-    margin-right: 0%;
-    margin-bottom: 0%;
+    margin-top: 0%;
   }
 }
 
 .mobileAnimation {
-  animation: append-animate 0.2s linear;
+  animation: append-animate 0.6s linear;
 }
 
 .mobileAnimationReverse {
