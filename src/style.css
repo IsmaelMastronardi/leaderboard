@@ -1,10 +1,16 @@
+body {
+  background: rgb(63, 104, 190);
+  background: radial-gradient(circle, rgba(63, 104, 190, 1) 0%, rgba(45, 248, 253, 1) 100%);
+}
+
 .tilteSection {
   display: flex;
   justify-content: center;
 }
 
 .pageTitle {
-  font-size: 40px;
+  font-size: 50px;
+  margin-top: 20px;
 }
 
 .leaderboardSection {
@@ -16,7 +22,7 @@
 }
 
 .scoreArticle {
-  width: 240px;
+  width: 340px;
 }
 
 .scoreDiv {
@@ -63,18 +69,36 @@ input::-webkit-inner-spin-button {
   list-style: none;
   padding: 0;
   border: 2px solid;
+  max-height: 390px;
+  overflow: hidden;
+}
+
+.scoreList:hover {
+  overflow-y: scroll;
 }
 
 .scoreItem {
-  font-size: 16px;
-  font-weight: bold;
-  padding-top: 4px;
+  font-size: 22px;
+  padding-top: 8px;
   padding-bottom: 4px;
-  padding-left: 4px;
+  padding-left: 8px;
+  border-bottom: 1px solid rgb(170, 169, 169);
 }
 
-.greyItem {
-  background-color: rgb(189, 189, 189);
+.whiteItem {
+  background-color: white;
+}
+
+.firstPlace {
+  background-color: rgb(255, 217, 0);
+}
+
+.secondPlace {
+  background-color: rgb(197, 193, 193);
+}
+
+.thirdPlace {
+  background-color: rgb(209, 134, 48);
 }
 
 .scoreForm {
@@ -91,4 +115,27 @@ input::-webkit-inner-spin-button {
   padding: 4px;
   font-size: 14px;
   font-weight: bold;
+}
+
+@keyframes append-animate {
+  from {
+    opacity: 0;
+    margin-right: 100%;
+    margin-bottom: 100%;
+  }
+
+  to {
+    opacity: 1;
+    margin-right: 0%;
+    margin-bottom: 0%;
+  }
+}
+
+.mobileAnimation {
+  animation: append-animate 0.2s linear;
+}
+
+.mobileAnimationReverse {
+  animation: append-animate 0.2s linear;
+  animation-direction: reverse;
 }

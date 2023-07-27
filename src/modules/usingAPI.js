@@ -1,6 +1,9 @@
-const scoreList = document.querySelector('#gameScoreList');
+// const scoreList = document.querySelector('#gameScoreList');
 const fName = document.querySelector('#fName');
 const fScore = document.querySelector('#fScore');
+const scoreListHolder = document.querySelector('#scoreListHolder');
+const scoreList = document.createElement('ul');
+scoreList.classList.add('scoreList');
 const myId = 'eTp1wZzwkSLFf86ks2kWD';
 // eslint-disable-next-line prefer-template
 const myUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/' + myId + '/scores/';
@@ -11,6 +14,7 @@ const clearList = () => {
 };
 const display = (arr) => {
   clearList();
+  scoreListHolder.removeChild(scoreListHolder.firstChild);
   const newArr = arr.result;
   newArr.forEach((elem) => {
     elem.score = parseInt(elem.score, 10);
@@ -22,10 +26,21 @@ const display = (arr) => {
     scoreList.appendChild(newItem);
     const i = newArr.indexOf(elem);
     newItem.classList.add('scoreItem');
-    if (i % 2 === 0) {
-      newItem.classList.add('greyItem');
+    switch (i) {
+      case 0:
+        newItem.classList.add('firstPlace');
+        break;
+      case 1:
+        newItem.classList.add('secondPlace');
+        break;
+      case 2:
+        newItem.classList.add('thirdPlace');
+        break;
+      default:
+        newItem.classList.add('whiteItem');
     }
   });
+  scoreListHolder.appendChild(scoreList);
 };
 
 const refreshScores = async () => {
