@@ -3,6 +3,10 @@ body {
   background: radial-gradient(circle, rgba(63, 104, 190, 1) 0%, rgba(45, 248, 253, 1) 100%);
 }
 
+.whiteText {
+  color: white;
+}
+
 .tilteSection {
   display: flex;
   justify-content: center;
@@ -55,9 +59,8 @@ input::-webkit-inner-spin-button {
   padding-left: 10px;
   padding-right: 10px;
   background-color: transparent;
-  border: 1px solid ;
+  border: 1px solid;
   border-radius: 20px;
-  /* box-shadow: 3px 2px 5px rgb(0, 0, 0); */
   transition: 0.1s;
 }
 
@@ -76,10 +79,6 @@ input::-webkit-inner-spin-button {
   height: 50px;
   display: flex;
   align-items: center;
-}
-
-.fSubmit {
-
 }
 
 .scoreList {
@@ -128,8 +127,8 @@ input::-webkit-inner-spin-button {
 
 .formScore,
 .formName {
-  border: 2px solid;
-  padding: 4px;
+  border: 1px solid;
+  padding: 10px;
   font-size: 14px;
   font-weight: bold;
 }
