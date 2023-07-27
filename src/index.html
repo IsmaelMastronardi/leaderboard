@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link  href="style.css"> 
 </head>
 <body>
     <main>
@@ -15,17 +15,10 @@
         <article class="scoreArticle">
           <div class="scoreDiv">
             <h2 class="secondTitle">Recent scores</h2>
-            <button class="refreshBtn">Refresh</button>
+            <button class="refreshBtn" id="refreshBtn">Refresh</button>
           </div>
           <div>
-            <ul class="scoreList">
-              <li class="scoreItem">Name:100</li>
-              <li class="scoreItem greyItem">Name:20</li>
-              <li class="scoreItem">Name:50</li>
-              <li class="scoreItem greyItem">Name:78</li>
-              <li class="scoreItem">Name:125</li>
-              <li class="scoreItem greyItem">Name:77</li>
-              <li class="scoreItem">Name:42</li>
+            <ul class="scoreList" id="gameScoreList">
             </ul>
           </div>
         </article>
@@ -38,8 +31,8 @@
               <label for="fName"></label>
               <input type="text" id="fName" class="formName" placeholder="your name"><br>
               <label for="fScore"></label>
-              <input type="text" id="fScore" class="formScore" placeholder="your score"><br>
-              <input type="submit" class="fSubmit">
+              <input type="number" id="fScore" class="formScore" placeholder="your score"><br>
+              <input type="button" class="fSubmit" id="fButton" value="submit">
             </form>
           </div>   
         </article>

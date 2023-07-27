@@ -37,7 +37,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[simple HTML and CSS desing]**
+- **[Add new users and scores and display them to the page using an API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
