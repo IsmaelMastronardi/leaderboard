@@ -1,10 +1,20 @@
+body {
+  background: rgb(63, 104, 190);
+  background: radial-gradient(circle, rgba(63, 104, 190, 1) 0%, rgba(45, 248, 253, 1) 100%);
+}
+
+.whiteText {
+  color: white;
+}
+
 .tilteSection {
   display: flex;
   justify-content: center;
 }
 
 .pageTitle {
-  font-size: 40px;
+  font-size: 50px;
+  margin-top: 20px;
 }
 
 .leaderboardSection {
@@ -15,8 +25,12 @@
   gap: 10vw;
 }
 
+.listHolder {
+  background-color: white;
+}
+
 .scoreArticle {
-  width: 240px;
+  width: 340px;
 }
 
 .scoreDiv {
@@ -24,6 +38,7 @@
   flex-direction: row;
   align-items: center;
   gap: 36px;
+  height: 50px;
 }
 
 .secondTitle {
@@ -38,43 +53,68 @@ input::-webkit-inner-spin-button {
 
 .fSubmit,
 .refreshBtn {
+  color: white;
   font-size: 14px;
-  padding: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
-  background-color: white;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: transparent;
   border: 1px solid;
-  border-radius: 2px;
-  box-shadow: 3px 2px 5px black;
+  border-radius: 20px;
   transition: 0.1s;
 }
 
 .fSubmit:hover,
 .refreshBtn:hover {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(49, 178, 230);
+  padding: 12px;
 }
 
 .fSubmit:active,
 .refreshBtn:active {
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(113, 205, 241);
+}
+
+.submitBtnDiv {
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .scoreList {
   list-style: none;
   padding: 0;
   border: 2px solid;
+  max-height: 390px;
+  overflow: hidden;
+}
+
+.scoreList:hover {
+  overflow-y: scroll;
 }
 
 .scoreItem {
-  font-size: 16px;
-  font-weight: bold;
-  padding-top: 4px;
+  font-size: 22px;
+  padding-top: 8px;
   padding-bottom: 4px;
-  padding-left: 4px;
+  padding-left: 8px;
+  border-bottom: 1px solid rgb(170, 169, 169);
 }
 
-.greyItem {
-  background-color: rgb(189, 189, 189);
+.whiteItem {
+  background-color: white;
+}
+
+.firstPlace {
+  background-color: rgb(255, 217, 0);
+}
+
+.secondPlace {
+  background-color: rgb(197, 193, 193);
+}
+
+.thirdPlace {
+  background-color: rgb(209, 134, 48);
 }
 
 .scoreForm {
@@ -87,8 +127,29 @@ input::-webkit-inner-spin-button {
 
 .formScore,
 .formName {
-  border: 2px solid;
-  padding: 4px;
+  border: 1px solid;
+  padding: 10px;
   font-size: 14px;
   font-weight: bold;
+}
+
+@keyframes append-animate {
+  from {
+    opacity: 0;
+    margin-top: 100%;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
+
+.mobileAnimation {
+  animation: append-animate 0.6s linear;
+}
+
+.mobileAnimationReverse {
+  animation: append-animate 0.2s linear;
+  animation-direction: reverse;
 }

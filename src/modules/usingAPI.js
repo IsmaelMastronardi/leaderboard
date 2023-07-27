@@ -19,12 +19,22 @@ const display = (arr) => {
   sortedArr.forEach((elem) => {
     const newItem = document.createElement('li');
     newItem.textContent = `${elem.user} : ${elem.score}`;
-    scoreList.appendChild(newItem);
     const i = newArr.indexOf(elem);
     newItem.classList.add('scoreItem');
-    if (i % 2 === 0) {
-      newItem.classList.add('greyItem');
+    switch (i) {
+      case 0:
+        newItem.classList.add('firstPlace', 'mobileAnimation');
+        break;
+      case 1:
+        newItem.classList.add('secondPlace', 'mobileAnimation');
+        break;
+      case 2:
+        newItem.classList.add('thirdPlace', 'mobileAnimation');
+        break;
+      default:
+        newItem.classList.add('whiteItem');
     }
+    scoreList.appendChild(newItem);
   });
 };
 
